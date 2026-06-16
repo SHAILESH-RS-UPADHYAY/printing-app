@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #4F46E5;
+  --primary-light: #818CF8;
+  --sidebar-width: 260px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #F8FAFC;
+  color: #1E293B;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #4F46E5 0%, #7C3AED 100%);
+  color: white;
+  z-index: 50;
+}
+
+.main-content {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+}
+
+.status-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-placed { @apply bg-yellow-100 text-yellow-800; }
+.status-processing { @apply bg-blue-100 text-blue-800; }
+.status-printed { @apply bg-purple-100 text-purple-800; }
+.status-shipped { @apply bg-indigo-100 text-indigo-800; }
+.status-delivered { @apply bg-green-100 text-green-800; }

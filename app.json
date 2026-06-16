@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "PrintClient",
+    "slug": "print-client",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "printclient",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.printclient.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow PrintClient to take photos of documents",
+        "NSPhotoLibraryUsageDescription": "Allow PrintClient to access your photos for printing"
+      }
+    },
+    "android": {
+      "package": "com.printclient.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-document-picker",
+      "expo-font",
+      [
+        "react-native-razorpay",
+        {
+          "android": {
+            "enableAutoIntegration": true
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "apiUrl": {
+        "development": "http://192.168.1.100:4000/api",
+        "production": "https://print-client-api.up.railway.app/api"
+      }
+    }
+  }
+}
