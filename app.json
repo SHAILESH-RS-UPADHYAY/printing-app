@@ -35,15 +35,7 @@
     },
     "plugins": [
       "expo-document-picker",
-      "expo-font",
-      [
-        "react-native-razorpay",
-        {
-          "android": {
-            "enableAutoIntegration": true
-          }
-        }
-      ]
+      "expo-font"
     ],
     "extra": {
       "apiUrl": {
